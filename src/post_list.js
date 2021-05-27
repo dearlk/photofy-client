@@ -8,8 +8,7 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-      //console.log("fetching data...")
-    fetch('/api')
+    fetch('/api/?item=20')
       .then(response => response.json())
       .then(json => this.setState({ posts: json }));
   }
